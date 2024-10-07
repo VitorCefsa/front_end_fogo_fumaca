@@ -1,0 +1,22 @@
+[
+  {
+    "paths": [
+      "tiny_face_detector_model-shard1.bin"
+    ],
+    "weights": {
+      "block1_conv1": [57600, 64],
+      "block1_conv2": [36864, 64],
+      "block2_conv1": [73728, 128],
+      "block2_conv2": [147456, 128],
+      "block3_conv1": [294912, 256],
+      "block3_conv2": [589824, 256],
+      "block3_conv3": [589824, 256],
+      "block4_conv1": [1179648, 512],
+      "block4_conv2": [2359296, 512],
+      "block4_conv3": [2359296, 512],
+      "fc1": [37748736, 4096],
+      "fc2": [16777216, 4096],
+      "predictions": [4096, 2622]
+    }
+  }
+]
