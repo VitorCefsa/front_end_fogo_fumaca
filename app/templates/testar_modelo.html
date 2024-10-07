@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h1>Teste o modelo de Detecção de Fogo</h1>
+    <p class="lead">Envie uma imagem e o sistema detectará se há fogo.</p>
+    
+    <form action="{{ url_for('main.test_model') }}" method="POST" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="file" class="form-label">Escolha uma imagem</label>
+        <input class="form-control" type="file" id="file" name="file">
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+{% endblock %}

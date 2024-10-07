@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container mt-5 text-center">
+    <h1>Resultado da Detecção</h1>
+    {% if resultado %}
+      <p class="lead">Fogo detectado na imagem enviada!</p>
+    {% else %}
+      <p class="lead">Nenhum fogo foi detectado na imagem enviada.</p>
+    {% endif %}
+    <a href="{{ url_for('main.test_model') }}" class="btn btn-primary">Testar outra imagem</a>
+  </div>
+{% endblock %}
