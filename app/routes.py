@@ -26,3 +26,28 @@ def test_model():
             resultado = detect_fire(filepath)  # Suponha que você tenha uma função `detect_fire` para isso
             return render_template('resultado.html', resultado=resultado)
     return render_template('testar_modelo.html')
+
+@main.route('/real-time-detection')
+def real_time_detection():
+    # Página para detecção em tempo real via webcam
+    return render_template('detectar_tempo_real.html')
+
+@main.route('/sobre')
+def about():
+    # Página sobre o projeto
+    return render_template('sobre.html')
+
+@main.route('/contato', methods=['GET', 'POST'])
+def contato():
+    # Processamento do formulário de contato
+    if request.method == 'POST':
+        nome = request.form['nome']
+        email = request.form['email']
+        mensagem = request.form['mensagem']
+        
+        # Aqui você pode adicionar o código para processar os dados, como salvar em um banco de dados ou enviar por e-mail.
+        # Exemplo simples: retornar uma string com os dados enviados.
+        return f"Mensagem enviada por {nome} ({email}): {mensagem}"
+
+    # Se for uma requisição GET, apenas renderiza a página de contato
+    return render_template('contato.html')

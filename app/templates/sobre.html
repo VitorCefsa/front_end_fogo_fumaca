@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre o Projeto</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Detecção de Fogo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="tooltip" data-bs-placement="left" title="Mais opções">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('main.index') }}">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="{{ url_for('main.about') }}">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('main.test_model') }}">Testar Modelo Via Mídia</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('main.real_time_detection') }}">Detecção em Tempo Real</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Conteúdo principal -->
+  <div class="container mt-5">
+    <h1>Sobre o Projeto</h1>
+    <p class="lead">Este projeto tem como objetivo desenvolver um sistema de detecção de fogo e fumaça utilizando visão computacional. O foco é a criação de uma solução eficiente e em tempo real para identificar focos de incêndio e minimizar os riscos em ambientes vulneráveis.</p>
+
+    <h3>Objetivos</h3>
+    <ul>
+      <li>Desenvolver uma ferramenta que utiliza inteligência artificial para detectar fogo e fumaça.</li>
+      <li>Integrar o sistema com diferentes dispositivos, como câmeras de segurança, webcams e vídeos de arquivos.</li>
+      <li>Utilizar modelos de aprendizado de máquina, como CNNs, para realizar a detecção de forma eficiente.</li>
+      <li>Proporcionar uma interface amigável para o usuário, permitindo o uso tanto via upload de vídeos quanto em tempo real através de uma webcam.</li>
+    </ul>
+
+    <h3>Tecnologias Utilizadas</h3>
+    <ul>
+      <li><strong>Flask:</strong> Framework web para backend.</li>
+      <li><strong>TensorFlow e Keras:</strong> Utilizados para treinar e carregar os modelos de aprendizado profundo.</li>
+      <li><strong>OpenCV:</strong> Biblioteca para manipulação de imagens e vídeos.</li>
+      <li><strong>Bootstrap:</strong> Framework CSS para estilização e criação de uma interface responsiva.</li>
+    </ul>
+
+    <h3>Equipe de Desenvolvimento</h3>
+    <p>O projeto foi desenvolvido pelos alunos da turma EC9 como parte do trabalho de conclusão de curso, com foco na implementação prática de técnicas de visão computacional em cenários de monitoramento de incêndios.</p>
+    
+    <h3>Motivação</h3>
+    <p>A motivação para este projeto surge da crescente demanda por sistemas de monitoramento mais eficientes em áreas florestais, indústrias e até residências. Com a utilização de visão computacional, é possível detectar de forma rápida e precisa focos de incêndio, evitando a propagação de danos e salvando vidas e propriedades.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white mt-5 p-4 text-center">
+    <p>Projeto de <strong>Detecção de Fogo</strong> | TCC EC9</p>
+    <p>&copy; 2024 | <a href="

@@ -1,23 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <div class="mt-5 text-center">
-    <h1>Bem-vindo ao Projeto de Detecção de Fogo e Fumaça</h1>
+  <div class="container mt-5 text-center">
+    <h1 class="display-4">Bem-vindo ao Projeto de Detecção de Fogo e Fumaça</h1>
     <p class="lead">Este projeto utiliza visão computacional para detectar focos de incêndio em tempo real.</p>
 
     <div class="row mt-5">
-      <div class="col-md-6">
-        <div class="card">
-          <img class="card-img-top" src="{{ url_for('static', filename='img/fogo.png') }}" alt="Detecção de Fogo">
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/fogo.png') }}" alt="Detecção de Fogo" style="width: 100%; height: 300px; object-fit: cover;">
           <div class="card-body">
             <h5 class="card-title">Detecção de Fogo</h5>
             <p class="card-text">Nossa solução detecta focos de incêndio utilizando visão computacional.</p>
           </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="card">
-          <img class="card-img-top" src="{{ url_for('static', filename='img/fumaca.jpg') }}" alt="Detecção de Fumaça">
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/fumaca.jpg') }}" alt="Detecção de Fumaça" style="width: 100%; height: 300px; object-fit: cover;">
           <div class="card-body">
             <h5 class="card-title">Detecção de Fumaça</h5>
             <p class="card-text">Detectamos a presença de fumaça em tempo real, minimizando riscos.</p>
